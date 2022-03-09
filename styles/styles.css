@@ -1,0 +1,145 @@
+*{
+    padding: 0px;
+    border: 1 ;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: goldenrod;
+}
+.titulo{
+    font-family: 'Shizuru', cursive;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Akaya Telivigala', cursive;
+    color: rgb(0, 0, 0);
+}
+nav {
+    position:relative;
+    padding: 10px;
+}
+nav ul{
+list-style: none;
+background-color: gray;
+display: flex;
+justify-content: space-evenly;
+}
+nav ul a{
+    color:black;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+nav ul a:hover{
+    color: brown;
+    background-color: white;
+
+}
+.avatar{
+ text-align: center;
+}
+.videos{
+    
+    background-color: black;
+}
+
+
+.instagram{
+    vertical-align: middle;
+}
+.twitter{
+    vertical-align: middle;
+}
+.facebook{
+    vertical-align: middle;
+}
+.telefono{
+    color: black;
+}
+.subtitulo{
+    color: goldenrod;
+    font-family: 'Akaya Telivigala', cursive;
+    text-align: left;
+
+}
+.mainfotos{
+    border: 2px double;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.home{
+    background-image: url(../icos/icons/animated-gifs-of-fighting-game-backgrounds-1.gif);
+    
+    width: 100%; height: 100%;
+    background-position: center 25%; 
+    background-size: cover;
+    grid-area: home;
+    justify-content:space-between;
+
+}
+.hometitle{
+    color: white;
+    text-align: center;
+    
+}
+.nav{
+    grid-area: nav;
+    flex-wrap: nowrap;
+
+}
+
+.footer{
+    text-align: center;
+    grid-area: footer;
+    margin: 100px;
+    padding: 10px;
+}
+.header{
+grid-area: header;
+}
+.main{
+    grid-area: main;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 290px 40px 760px 240px;
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "home home home home"
+    "footer footer footer footer";
+    align-items:flex-start; 
+}
+.grid2{
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 20% 10% 40%;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+    align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+.grid{
+    grid-template-areas: 
+    "header header nav nav"
+    "nav nav nav nav"
+    "home home footer footer"
+    "home home footer footer"}
+    
+    .grid2{
+        grid-template-areas: 
+            "header header header"
+            "nav main main"
+            "main main main"
+            "footer footer footer";
+        }
+}
